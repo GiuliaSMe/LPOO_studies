@@ -16,6 +16,25 @@ Cada módulo possui sua própria pasta, independente das demais. Ao iniciar um n
 └── Modulo4/   (em breve)
 ```
  
+Dentro de cada módulo, o código-fonte fica separado dos arquivos compilados:
+ 
+```
+ModuloX/
+├── src/    <- arquivos .java
+└── bin/    <- arquivos .class gerados na compilação (ignorado pelo git)
+```
+ 
+## Como compilar e rodar
+ 
+Dentro da pasta do módulo desejado:
+ 
+```bash
+javac -d bin src/*.java
+java -cp bin Main
+```
+ 
+O primeiro comando compila todos os `.java` de `src/` e organiza os `.class` gerados dentro de `bin/`. O segundo executa a classe principal a partir dos arquivos compilados.
+
 ## Módulos
  
 ### Módulo 1 — Introdução a OO
