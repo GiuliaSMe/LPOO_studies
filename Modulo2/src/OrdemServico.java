@@ -26,20 +26,7 @@ public class OrdemServico{
             """.formatted(this.cliente, this.veiculo.getVeiculo(), this.calcValorTotal(),this.showServicosAssociados());
 
         System.out.print(resumo);
-    }
-
-    //TODO: decidir oq fazer com isso
-    /*
-    public void aplicarDesconto(int percentual){
-        if (percentual>100){
-            System.out.println("\nDesconto inválido!");
-            return;
-        }
-        double desconto = this.valorServico * (percentual/100);
-        this.valorServico -= desconto;
-    }
-     */
-    
+    }    
 
     public String showServicosAssociados(){
         String textoServicosPrestados = "";
