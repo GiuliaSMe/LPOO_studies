@@ -12,7 +12,7 @@ Cada módulo possui sua própria pasta, independente das demais. Ao iniciar um n
 .
 ├── Modulo1/
 ├── Modulo2/
-├── Modulo3/   (em breve)
+├── Modulo3/   
 └── Modulo4/   (em breve)
 ```
  
@@ -44,7 +44,7 @@ Conceitos básicos de orientação a objetos: classes, objetos e métodos. Imple
 Evolução do sistema para suportar múltiplas ordens de serviço e múltiplos serviços por ordem, usando arrays de objetos. Introdução da classe `Servico` e do `GerenciadorOrdens`, além de uma aplicação de console com menu interativo e buscas por nome do cliente e por placa do veículo.
  
 ### Módulo 3 — Herança, Polimorfismo e Encapsulamento
-Reestruturação do sistema aplicando herança e polimorfismo, encapsulamento de atributos, organização em pacotes e uso de modificadores de acesso.
+Encapsulamento de todos os atributos (private + getters/setters) e criação de uma hierarquia de serviços: `Servico` passa a ser a classe base, especializada em `ServicoComPecas`, `ServicoPorHora` e `ServicoDiagnostico`, cada uma com sua própria regra de cálculo de preço via sobrescrita de `getPrecoFinal()`. O array de serviços na `OrdemServico` é declarado como `Servico[]` mas armazena as diferentes subclasses, e o cálculo do total explora polimorfismo puro.
  
 ### Módulo 4 — Classes Abstratas, Interfaces e Generics
 Introdução de classes abstratas e interfaces, tratamento de exceções e estruturas de dados genéricas, tornando o sistema mais robusto e flexível.
